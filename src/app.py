@@ -4,8 +4,8 @@ from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
-from auth import AuthError, requires_auth
-from models import setup_db, create_all, Actor, Movie
+from .auth import AuthError, requires_auth
+from .models import setup_db, create_all, Actor, Movie
 
 ELEMENTS_PER_PAGE = 10
 

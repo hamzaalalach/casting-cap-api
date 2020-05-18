@@ -12,7 +12,6 @@ from models import setup_db, create_all, Actor, Movie
 
 ELEMENTS_PER_PAGE = 10
 
-create_all()
 
 def get_elements_paginated(elements, page):
 	start = (page - 1) * ELEMENTS_PER_PAGE
@@ -26,6 +25,7 @@ def create_app(test_config=None):
 	app = Flask(__name__)
 	CORS(app)
 	setup_db(app)
+	create_all()
 
 	@app.after_request
 	def after_request(response):

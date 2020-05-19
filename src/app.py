@@ -1,4 +1,3 @@
-from models import setup_db, create_all, Actor, Movie
 from auth import AuthError, requires_auth
 import os
 import sys
@@ -9,6 +8,7 @@ from flask_cors import CORS
 # To be able to recognize relative imports
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
+from models import setup_db, create_all, Actor, Movie
 
 ELEMENTS_PER_PAGE = 10
 

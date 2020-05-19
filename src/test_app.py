@@ -2,12 +2,9 @@ import unittest
 import json
 import os
 from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_dotenv
 
 from app import create_app
 from models import setup_db, Movie, Actor
-
-load_dotenv('.env')
 
 def get_last_element_id(element):
     elements = element.query.order_by('id').all()

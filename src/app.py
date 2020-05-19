@@ -1,4 +1,3 @@
-from auth import AuthError, requires_auth
 import os
 import sys
 from flask import Flask, request, abort, jsonify
@@ -9,6 +8,7 @@ from flask_cors import CORS
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 from models import setup_db, create_all, Actor, Movie
+from auth import AuthError, requires_auth
 
 ELEMENTS_PER_PAGE = 10
 
